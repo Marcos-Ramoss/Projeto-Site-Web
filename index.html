@@ -1,0 +1,590 @@
+<!doctype html>
+<html lang="pt-br">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon"
+    href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAA0lBMVEX////iUlK/S0tPHR3k5OTMzMzFXV3iUFDL0tLQ0NDgY2PiTEzk6urji4u9Pj7bxcXjWlrEWVnQgoKZPDzMdHRHGhq/SUnBVFTpVFSeOTmyQUFDGRmkQEDMS0uZODjfUVFYICDVTU2MMzNqJye2QkKUKCjd19diJCR2KyvnxMSALy/BRkZUHx+oPT20QUH25+fcoqLHZWXXlJTLRkajUlLjQ0Pdc3PhsbH68/P04eHu1NTKb2/mvr7am5vNiYnWrq7RtrbYzMyuTU2PJyejSUnbeXkC8I9/AAAG5klEQVR4nO2dYXuaSBCAo0ab1JzG2oVFIogY8SDYxF7T3PWubdrm//+lW2BVBBR2oeySZ94PTbAQ53VgZnch7dkZAAAAAAAAAAAAAAAAAAAAAAAAAAAAALwCPnx+974Umz9FK5zkadNWRyVRexI7fnhQe+UZte9Fixzj6WFUgSBB/Sxa5Qhfq8hgSPtv0S6ZfFCqEuyN3omWyeS+shT2esqTaJss3gdX4Uhtl0MNr2X1H9E2WTwEkSlKSUPyA4ijKmXHIIbtsn6RpCqr4agKvUhRUsNqMhgqtuU0rEyw3fakNOxVaDiQ0nBUoaHy5d1vY/Mvb7NVqzQsPUU5NXsZcQ7tqzWsbnyUgfqFK40NMuyNuBSbZNhT/3vthlxj+2YZ8syyqzT8najhp8czBW2KIZm9qEGteb2G7WDcO3rlhoHiKzckiq/dkIx8KzFUvIEUeBmhPVRgqAzUr9+GEvDtqzpIBdcrb6gM7s+vrs4lgERxn1SswFBRn6XQi7gaJtZYyhsqikyCRPH58GIsbzj4JpUgUbwfVGqoqJIJEg7O09KG3r10hlcbrxLDyU3I7XfRQmm++1FskzKGN2PK7bNonzTPP7fR+dyGO8Hx7VK0T5rl7S68G07D8bgphuMbLsObBhmOfR7DcZMMDQ7DH3HDn8sr6Vj+jBv+YDf8ZQRHTrxpwMc/JORjGJo3CRX/4jAkhylmi9KXkG1sJqmJBp+h1WoIFp+hYYkOvDgWl6EnOmwWPB7DN6KjZuENh6HaLMMRu+F1swzfgiEYyg4YgqH8gCEYyg8YgqH8gCEYyg8YgqH8gOHvNMS4yE5l30WYITY935/mxY+nvrYwS1kKM9Q6OkK6ezJ6bLrBTh2tzBsJMrRsvROAZifSiKczFO6l2xb/W4kxtGjogePxBGn7nWYW93uJMdwLkgQ5XlYasefo+52Qw/1eIgyxGxMMHFeLRMnErcVKP9gHzXnLjQBDvAiDR5TgW90xPBMTWsEfpmfs8oe2H4a+4FQUYGjOoqT4IStETZDjzjVfm7vOXgs5hubQDcfM/9FyGOKogKB1mBNs7M/YfVL3pyaBFhxd40ti/YYmjX7SShqmuIs+BJrmDl8SazfEvl7UkFYX7NMT2W+GYeuucA639ZMadu6aYbhG3GcpWjTBEK9oQdG3hnqyvlAdFK80UVNZ8dSaug2tDnK1AGMaveAZ4ebqUBHN5gZpE0G3sMmXu3Cr07HkNyR1hrTukN1LONYS9lcgwaDJQ24r2kPnqTV153CF9KyrKWE4i1606Wa0tUJoJb+hRRKRb7htE3RssC+piKMl1muIJ3ohQyPeCLe+E/LprKU3dAvlsONETna8D5IqzDXDqNnwLpwk5FcaI94mgrpDEzqT3dDSg3gnAf62W/jhppvohrbmB22iM5+T2XKwFbUT3ZLccBI27qyOn2z4sTYRNQ06NmW/EGs1xPPYVKnAqI22CXv/AseFWK9hPFbmuUWILbehecdj2Iobss8vajWcxufvBc7S2eHcImQqteEibphexUgn0di1id1LzE9g12oYb3povg66xNpNecV97N1S1fYVn/VCrNMwXkoz1p2yHRN7sBfTWg1XeT75sM+C6zQ0ndKCpF2wvmudhtasAsMZ6wSqVsMKBNlXMuo0nOr58eeiszbEOg29E4ZkKK5Hf02+nqqwOmtDrNNwfTRwhFa+Z9HdLI/0wKO7Zk6gJTE8HJzE/exJ4nY+Nif2kYQzt/w6DbVMQ+QsMh47wXgxy96d9RZUnYaZQ9Cjj2NgM3OAQFep5DScZ0SM3BPPYrhZBzTNcHbykIwhAvPAVLAhXa05doSfLjdNM8wZg8UXBZppmFcYM8pvwwxzB5npoazUhqlucaqQ0mNS5VTqWpo65QosuqTGsieegxNvmBq1OfnpwMlZsz6RN4epfBQKNtkwpJ5bJMtGsdXdxEFSz4Bb9mE21oWe814fJFHulajEjV634GEHA3D2B6NqzWH8NEWFnzU0nbiixfqm9d570nZnnG4XXzMz97NhnXnJu+673HO60u0wRYp9h95Wlf4+fgt7c9edax7jL4rglqcFB/L8wzj1P32JC/2qTHUHwu89gaH8gCEYyg8YgqH8gCEYyg8YgqH8gCEYyg8YZvHYKMP+I7vhpp//c+Whv2E3HH4SHTULn4bshhcvDUpi/+WC3fDyuTm1pn/dveQw7H6/bkgW+9dDPsOL7ku//0Z6+v2XbpfPsNu9GG4e30rO42Z4QUJdshuedwMuGkAY6Dm74VO3UbALnp0tRQfNAsdJehZdiQ2Bo84EPDVG8ZLrf48PaMiJyneKUs6Xl5Kz5KiiAAAAAAAAAAAAAAAAAAAAAAAAovgfEEGlK1GwOmYAAAAASUVORK5CYII=">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="style.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+  <title> Home Game Vicio </title>
+  <style>
+    h1 {
+      text-align: center;
+      color: white;
+
+    }
+
+    body {
+
+      background-color: black;
+      background-size: cover;
+      background-position: right;
+    }
+
+    p {
+      color: rgb(255, 255, 255);
+    }
+
+    img:hover {
+      opacity: 0.7;
+      transition: 1s;
+      
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <!-- INICIO DA NAVEBAR -->
+
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#"> <i class="bi bi-house-door-fill"></i> </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="listas.html"> Lista</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" onclick="cadastramento()" aria-current="page" href="cadastro.html">
+              Cadastre-se</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#"></a>
+          </li>
+          <li class="nav-item dropdown ">
+            <a class="nav-link dropdown-toggle " href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              Categorias dos Jogos
+            </a>
+            <ul class="dropdown-menu bg-danger " aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="#">Ação</a></li>
+              <li><a class="dropdown-item" href="#">Plataforma</a></li>
+              <li><a class="dropdown-item" href="#">Luta</a></li>
+              <li><a class="dropdown-item" href="#">Rpg</a></li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li><a class="dropdown-item" href="#">procurar outras categoria</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">HoyoNiverse Jogos Onlines</a>
+          </li>
+        </ul>
+
+        <!--Barra de Pesquisa -->
+
+        <form class="d-flex">
+          <input class="form-control me-2" type="text" id="searchInput" placeholder="pesquisar" aria-label="text">
+          <button class="btn btn btn-danger" type="submit" id="searchResults" onclick="search(searchTerm)">pesquisa</button>
+        </form>
+        <!--Barra de Pesquisa -->
+
+      </div>
+    </div>
+  </nav>
+
+
+  <!-- FIM DA NAVEBAR -->
+
+  <h1> Bem vindo ao Easy Game  </h1><br><br>
+
+
+  <div class="container col-4">
+
+    <!-- INICIO DO CARROSSEL  -->
+    <!-- ******************************************************************************************************* -->
+    <div id="carouselExampleIndicators1" class="carousel slide" data-bs-ride="carousel">
+      <a href="#" class="link-success">Lançamentos</a>
+      <div class="carousel-indicators">
+        <button type="button " data-bs-target="#carouselExampleIndicators1" data-bs-slide-to="0" class="active"
+          aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators1" data-bs-slide-to="1"
+          aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators1" data-bs-slide-to="2"
+          aria-label="Slide 3"></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <a href="Genshin impact.html"> <img
+              src="https://img.olhardigital.com.br/wp-content/uploads/2021/03/Genshin-Impact-capa.jpg" width="250"
+              height="250" class="d-block w-100 img-fluid" alt="..."> </a>
+        </div>
+        <div class="carousel-item">
+          <a href="dota2.html"> <img src="https://cdn.akamai.steamstatic.com/steam/apps/570/header.jpg?t=1677268716"
+              width="250" height="250" class="d-block w-100 img-fluid" alt="..."></a>
+        </div>
+        <div class="carousel-item">
+          <a href="League of Legend.html"><img src="https://th.bing.com/th/id/OIP.jnEwl1bTeYEKGJyB2uYkSwHaEK?pid=ImgDet&rs=1" width="250"
+              height="250" class="d-block w-100 img-fluid" alt="..."> </a>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators1"
+        data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators1"
+        data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  </div><br><br>
+
+
+
+  <!-- ******************************************************************************************************* -->
+  <!-- FIM DO CARROSSEL  -->
+
+  <!-- ******************************************************************************************************* -->
+  <!-- INICIO DO CARROSSEL 2 -->
+  <div class="container col-4">
+    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+      <a href="#" class="link-success">Mais jogados</a>
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+          aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+          aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+          aria-label="Slide 3"></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <a href="Cs.html"> <img
+              src="https://s2.glbimg.com/BsRH4rij3O7pZ-gj3JCCLNFcFw0=/0x0:1100x618/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_bc8228b6673f488aa253bbcb03c80ec5/internal_photos/bs/2022/Y/i/dULbPDQDC1fIKuUQQRug/csgo-image.jpg"
+              width="250" height="250" class="d-block w-100 img-fluid" alt="..."> </a>
+        </div>
+        <div class="carousel-item">
+          <a href="Fortnite.html"> <img
+              src="https://cdn1.epicgames.com/offer/fn/23BR_C4S1_EGS_Launcher_Blade_2560x1440_2560x1440-70d48b6b897fd8509891ebeb1c160117"
+              width="250" height="250" class="d-block w-100 img-fluid" alt="..."></a>
+        </div>
+        <div class="carousel-item">
+          <a href="Valorant.html"><img
+              src="https://s2.glbimg.com/M0ll8r3w3WsiRLLroy5xJaK4A5c=/0x0:1656x915/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_08fbf48bc0524877943fe86e43087e7a/internal_photos/bs/2020/N/j/3cZcm6Qf6TxFIAW0nMNg/como-baixar-valorant-de-graca-the-squad.jpg"
+              width="250" height="250" class="d-block w-100 img-fluid" alt="..."> </a>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+        data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+        data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  </div>
+  <br><br>
+  <!-- ******************************************************************************************************* -->
+  <!-- FIM DO CARROSSEL 2  -->
+
+
+  <!-- ******************************************************************************************************* -->
+  <!-- INICIO DO CARD  -->
+
+  <div class="card-group">
+    <div class="card">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRF7ACDRFUmQZQ_N2gb01E6dU0x6WOo-scYiw&usqp=CAU"
+        width="300" height="300" class="card-img-top" alt="...">
+      <div class="card-body  bg-dark">
+        <h5 class="card-title">Warcraft Reforged</h5>
+        <p class="card-text "> Warcraft® III: Reforged™ é a nova concepção de um clássico da estratégia em tempo real.
+        </p>
+        <!-- Button trigger modal --> <br><br>
+        <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#Warcraft">
+          Quero jogar
+        </button>
+        <!-- Modal 1 -->
+        <div class="modal fade" id="Warcraft" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-fullscreen">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Sobre o jogo</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body bg-dark">
+                <p>Na BlizzCon 2018, Blizzard anunciou uma versão remasterizada de Warcraft III intitulada Warcraft III:
+                  Reforged, que contaria com modelos de personagens refeitos e gráficos melhorados, para ser lançado em
+                  2020.[3] De acordo com o artista Brian Souza e o produtor Pete Stillwell, algumas partes da história
+                  do
+                  Reforged foram mudadas para sincroniza-la com o que foi estabelecido em World of Warcraft.[4] A
+                  Blizzard
+                  também contratou o novelista Christie Golden, que escreveu alguns livros sobre o universo Warcraft,
+                  para
+                  garantir que a história dos jogos permaneça em sincronia entre os títulos, incluindo alguns retcons de
+                  alguns eventos do jogo e aumentando a participação das personagens Jaina Proudmoore e Sylvanas
+                  Windrunner, que se tornaram centrais na história de World of Warcraft.[4] Stillwell também afirmou que
+                  Reforged vai balancear a jogabilidade. </p>
+
+                <p> Reforged acabou sendo um fracasso de público e crítica, com reclamações dos jogadores e analistas
+                  focando em bugs, downgrades gráficos e uma política de reembolso que foi tachada de "anti-consumidor".
+                  A
+                  Blizzard tentou se retratar e corrigir os erros, mas Warcraft III: Reforged acabou sendo um dos jogos
+                  mais mal avaliados da empresa.</p>
+
+                <p> Facções
+                  As quatro facções do jogo têm vantagens diferentes, desde a maneira de coletar os recursos (Ouro e
+                  Madeira) até os tipos de unidades, que são únicas por raça. Várias características são similares aos
+                  atributos raciais das facções de Starcraft. Os Night Elves, por exemplo, lembram os Terrans no aspecto
+                  de que suas construções podem levantar e se movimentar; também lembram os Zergs devido ao trabalhador
+                  ser sacrificado para criar a construção. Os Undead, tais como os Zergs, também corrompem o solo com
+                  suas
+                  construções, e a maioria das construções só podem ser feitas no solo contaminado. </p>
+                <p>
+                  Campanhas
+                  O modo Campanha do jogo é dividido em partes, onde cada parte enfoca uma das raças. Cada parte é,
+                  então,
+                  dividida em capítulos, que são como missões ou fases.</p>
+
+                <p>
+                  Multiplayer
+                  No modo multiplayer, é possível além de jogar mapas do Warcraft III Reign of Chaos (ROC, como é
+                  popularmente conhecido) e da expansão The Frozen Throne (TFT) é possível jogar mapas customizados, que
+                  são feitos utilizando o editor de mapas. Os modos mais comuns de se conectar a outros são jogadores
+                  são
+                  pela Battle.net, GG-Game e Eurobattle.</p>
+                <p>
+                  Mapas
+                  DotA All-stars (Defense of the Ancients)
+                  Ver artigo principal: Dota All-Stars
+                  É um mapa adaptado para combates entre heróis muito jogado em LAN Houses onde o Warcraft é muito
+                  popular. No início, você escolhe entre os Sentinels ou a Scourge. Você escolherá um herói para o
+                  combate. Note que há várias lojas com itens para ajudá-lo na luta. Depois de segundos de jogo,
+                  aparecerão unidades (creeps) que irão atacar a base inimiga, do outro lado do campo. (Sentinels no
+                  sudoeste, e a Scourge no nordeste do mapa). Você não pode controlar essas unidades, apenas seu herói.
+                  Mate as unidades do lado oposto e seu herói irá subir de nível e aprender habilidades próprias. Para
+                  vencer, a Scourge deverá destruir as Ancient Towers níveis 1, 2, 3, os defensores da World Tree, e a
+                  World Tree. Para os Sentinelas, eles deverão destruir as Spirit Towers níveis 1, 2, 3, as defensoras
+                  do
+                  Frozen Throne, e então destruir o Trono. O primeiro time a destruir a World Tree ou o Frozen Throne,
+                  ganha o jogo.</p>
+
+                <p> Nota: Este mapa só funciona na versão Frozen Throne, mas há versões adaptadas para ambas as versões,
+                  mas
+                  são bem antigas e difíceis de serem encontradas.</p>
+
+                <p> Island Defense (ID/Island)
+                  É um jogo clássico bem conhecido, com um objetivo simples, sobreviver ao titã que é controlado, por um
+                  jogador. Você faz parte de uma tribo de pequenos animais que devem sobreviver e acabar com o titã de
+                  uma
+                  vez por todas, que acorda em uma ilha com uma sede insaciável de destruição, com apenas um objetivo,
+                  obter reino total da pequena ilha fora do mapa. Aos defensores cabe apenas acabar com o titã, mas se o
+                  titã conseguir acabar com um dos defensores, ele se torna um mini-titã, ao lado de seu mestre. Esse
+                  pequeno titã pode ser controlado pelo jogador principal, dono do titã, ou o dono do defensor,
+                  dependendo
+                  apenas do que o titã principal quer.</p>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-dark" data-bs-dismiss="modal">Close</button>
+                <a
+                  href="magnet:?xt=urn:btih:cb2ba6d755f04110652008544166d66d8e4f1c3f&dn=Warcraft.III.Reforged.elamigos-games.com"><button
+                    type="button" class="btn btn-danger"><svg xmlns="http://www.w3.org/2000/svg" width="50" height="20"
+                      fill="currentColor" class="bi bi-download" viewBox="0 0 16 16">
+                      <path
+                        d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5z" />
+                      <path
+                        d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3z" />
+                    </svg></button></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Fim Modal 1 -->
+
+    <div class="card">
+      <img
+        src="https://ae01.alicdn.com/kf/S384e9434199d450db7b064a1c87b29dbO/Metroid-cartaz-samus-aran-jogo-de-v-deo-ps4-capa-de-fic-o-cient-fica-jogo.jpg_Q90.jpg_.webp"
+        width="300" height="300" class="card-img-top" alt="...">
+      <div class="card-body bg-dark">
+        <h5 class="card-title">Metroid Dread</h5>
+        <p class="card-text">O universo de Metroid Dread narra os fatos após Metroid Fusion (jogo de 2002 do GBA), em
+          que Samus elimina os parasitas letais conhecidos como X, além do planeta SR388.</p>
+        <!-- Button trigger modal -->
+        <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#Metroid">
+          Quero jogar
+        </button>
+        <!-- Inicio do Modal 2-->
+        <div class="modal fade" id="Metroid" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-fullscreen">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Sobre o jogo Metroid Dread</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body bg-dark">
+                <p> Metroid Dread é um jogo eletrônico de ação-aventura desenvolvido pela MercurySteam e Nintendo,
+                  lançado
+                  para Nintendo Switch em 8 de outubro de 2021.[1] O título é uma sequência de Metroid Fusion. O jogador
+                  assume o controle da caçadora de recompensas Samus Aran que enfrenta diversos inimigos robóticos no
+                  planeta ZDR. Ele mantém a jogabilidade de rolagem lateral dos jogos em 2D anteriores, adicionando
+                  novos
+                  elementos na ambientação e habilidades.
+
+                  Inicialmente, o jogo havia sido projetado para o console portátil Nintendo DS mas foi cancelado devido
+                  a
+                  limitações técnicas.[2] Seu título foi visto pela primeira vez em uma lista interna de softwares da
+                  Nintendo em 2005 e teve seu anúncio oficial anos depois, na convenção digital da E3 2021. Após o
+                  lançamento de Metroid: Samus Returns (2017), que foi desenvolvido em conjunto pela Nintendo EPD e a
+                  MercurySteam, o diretor e produtor de longa data da série Yoshio Sakamoto elogiou o trabalho da
+                  MercurySteam e propôs que a empresa pudesse desenvolver o próximo jogo da franquia.[3]
+
+                  Metroid Dread recebeu elogios da crítica e tornou-se o título da série mais vendido no Japão, Reino
+                  Unido e Estados Unidos. Desde o seu lançamento, o jogo vendeu aproximadamente 3 milhões de cópias,
+                  tornando-se o título mais vendido da série.[4] Foi indicado em diversas premiações da indústria,
+                  incluindo na categoria Jogo do Ano, na The Game Awards 2021 e foi premiado como Melhor Jogo de
+                  Ação/Aventura.
+
+                  Jogabilidade
+                  Metroid Dread é um jogo de ação e aventura rolagem lateral no qual os jogadores controlam a caçadora
+                  de
+                  recompensas chamada Samus Aran no planeta ZDR. Ele mantém a jogabilidade dos jogos anteriores da série
+                  introduzindo novas mecânicas como os ataques corpo a corpo que foram adicionados em Metroid: Samus
+                  Returns. Samus também podem deslizar e se fixar a superfícies azuis.[5]
+
+                  Dread apresenta uma temática furtiva, no qual a protagonista precisará enfrentar diversas criaturas
+                  robóticas e poderosas, chamadas de robôs EMMI. As máquinas foram criadas para perseguir e derrotar
+                  Samus, elas são extremamente poderosas e ágeis necessitando que o jogador crie estratégias para
+                  evitá-los: escondendo-se, reduzindo o ruído dos passos e usando a habilidade Manto Fantasma, uma
+                  camuflagem que deixa a protagonista invisível temporariamente. Caso o robô EMMI pegar Samus, o jogador
+                  tem uma pequena chance de executar um golpe corpo a corpo e escapar; se falhar, Samus morre e o jogo
+                  recomeça do último ponto de salvamento.</p>
+
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-dark" data-bs-dismiss="modal">Close</button>
+                <a
+                  href="magnet:?xt=urn:btih:E04831E40D83F6A1897DCC8A5B9F47DC046FB551&dn=Metroid+Dread+%28%2B+Yuzu%2FRyujinx+Emus+for+PC%2C+MULTi10%29+%5BFitGirl+Repack%5D&tr=udp%3A%2F%2F46.148.18.250%3A2710&tr=udp%3A%2F%2Fopentor.org%3A2710&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.dler.org%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.me%3A2730%2Fannounce&tr=udp%3A%2F%2F9.rarbg.to%3A2770%2Fannounce&tr=udp%3A%2F%2Ftracker.pirateparty.gr%3A6969%2Fannounce&tr=http%3A%2F%2Fretracker.local%2Fannounce&tr=http%3A%2F%2Fretracker.ip.ncnet.ru%2Fannounce&tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce&tr=udp%3A%2F%2Fipv4.tracker.harry.lu%3A80%2Fannounce&tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&tr=udp%3A%2F%2Ftracker.zer0day.to%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fcoppersurfer.tk%3A6969%2Fannounce"><button
+                    type="button" class="btn btn-danger"><svg xmlns="http://www.w3.org/2000/svg" width="50" height="20"
+                      fill="currentColor" class="bi bi-download" viewBox="0 0 16 16">
+                      <path
+                        d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5z" />
+                      <path
+                        d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3z" />
+                    </svg></button></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Fim do Modal 2-->
+
+    <div class="card">
+      <img src="https://images.alphacoders.com/117/thumb-1920-1173124.jpg" width="300" height="300" class="card-img-top"
+        alt="...">
+      <div class="card-body bg-dark">
+        <h5 class="card-title">God of War Ragnarok</h5>
+        <p class="card-text">O jogo começa após a morte da segunda esposa de Kratos e mãe de Atreus, Faye. </p>
+        <!-- Button trigger modal --> <br><br>
+        <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#god">
+          Quero jogar
+        </button>
+
+        <!-- Modal -->
+        <div class="modal fade" id="god" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-fullscreen">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Sobre o jogo God of War Ragnarok</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body bg-dark ">
+                <p> God of War Ragnarök é um jogo eletrônico de ação-aventura desenvolvido pela Santa Monica Studio e
+                  publicado pela Sony Interactive Entertainment. Foi lançado em 9 de novembro de 2022 para PlayStation 4
+                  e
+                  PlayStation 5. É o nono título da série God of War, o nono em ordem cronológica, e a sequência de God
+                  of
+                  War (2018). Vagamente baseado na mitologia nórdica, o jogo se passa na antiga Escandinávia e apresenta
+                  os protagonistas Kratos e seu filho Atreus. Servindo como o final da era nórdica da série, o jogo dá
+                  início ao Ragnarök, uma série de eventos que trazem o fim dos tempos e retrata a morte de alguns dos
+                  deuses nórdicos, que foi predito no jogo anterior após Kratos ter matado o deus Æsir Baldur.
+
+                  A jogabilidade é semelhante ao título de 2018. Possui combate baseado em combos, bem como elementos de
+                  jogos de quebra-cabeça e RPG. A jogabilidade foi reformulada em relação ao jogo anterior: além das
+                  armas
+                  principais de Kratos, um machado de guerra mágico e suas lâminas duplas, ele também adquire uma lança
+                  mágica e seu escudo ficou mais versátil, com diferentes tipos de escudos que possuem distintas
+                  habilidades ofensivas e defensivas. Seu filho Atreus, assim como alguns outros personagens, auxiliam
+                  no
+                  combate e podem ser controlados passivamente. Além disso, e pela primeira vez na franquia, existem
+                  algumas missões de história em que o jogador assume o controle total de Atreus; sua jogabilidade é
+                  semelhante a de Kratos, mas ele usa seu arco mágico como arma. Também existem mais tipos de inimigos e
+                  mini-chefes do que no jogo anterior.
+
+                  Originalmente programado para ser lançado em 2021, o jogo foi adiado em parte devido ao impacto da
+                  pandemia de COVID-19 no seu desenvolvimento e aos problemas de saúde do ator de Kratos, Christopher
+                  Judge, em agosto de 2019. Ragnarök foi aclamado pela crítica especializada, que concedeu elogios para
+                  sua narrativa, personagens, visuais, level design e melhorias gerais na jogabilidade em relação ao seu
+                  antecessor. O jogo foi um sucesso comercial, vendendo 5,1 milhões de unidades em seus primeiros cinco
+                  dias de lançamento, e tornando-se o jogo original mais rapidamente vendido da história do PlayStation.
+                  Em três meses, o jogo havia vendido mais de 11 milhões de cópias. Foi indicado a diversos prêmios,
+                  incluindo na categoria de Jogo do Ano no The Game Awards 2022.
+
+                  Jogabilidade
+                  Ver também: Jogabilidade de God of War (jogo eletrônico de 2018)
+                  God of War Ragnarök é um jogo eletrônico de ação-aventura em terceira pessoa. Possui uma câmera livre
+                  sobre o ombro, enquanto que cinematograficamente, o jogo é apresentado em plano-sequência, sem cortes
+                  de
+                  câmera ou telas de carregamento. A jogabilidade é semelhante ao seu antecessor, God of War (2018) e,
+                  assim como esse jogo, é apenas para um jogador.[1][2][3][4] Ao longo do jogo, os jogadores lutam
+                  contra
+                  inimigos mitológicos nórdicos, com mais tipos de oponentes do que no título anterior. Além dos
+                  inimigos
+                  encontrados em seu antecessor, alguns tipos de adversários mais novos incluem Einherjars, serpes,
+                  stalkers (criaturas semelhantes a centauros com chifres), fantasmas, invasores humanos, nokkens, entre
+                  muitos outros. Os desenvolvedores também adicionaram mais mini-chefes para dar mais variedade ao
+                  jogo.</p>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-dark" data-bs-dismiss="modal">Close</button>
+                <a
+                  href="magnet:?xt=urn:btih:4F515CD16844D32DF2AAB1995C2561D759DCEAA6&dn=God+of+War+%282022%29+MULTi19-ElAmigos&tr=udp%3A%2F%2Fpublic.popcorn-tracker.org%3A6969%2Fannounce&tr=http%3A%2F%2F104.28.1.30%3A8080%2Fannounce&tr=http%3A%2F%2F104.28.16.69%2Fannounce&tr=http%3A%2F%2F107.150.14.110%3A6969%2Fannounce&tr=http%3A%2F%2F109.121.134.121%3A1337%2Fannounce&tr=http%3A%2F%2F114.55.113.60%3A6969%2Fannounce&tr=http%3A%2F%2F125.227.35.196%3A6969%2Fannounce&tr=http%3A%2F%2F128.199.70.66%3A5944%2Fannounce&tr=http%3A%2F%2F157.7.202.64%3A8080%2Fannounce&tr=http%3A%2F%2F158.69.146.212%3A7777%2Fannounce&tr=http%3A%2F%2F173.254.204.71%3A1096%2Fannounce&tr=http%3A%2F%2F178.175.143.27%2Fannounce&tr=http%3A%2F%2F178.33.73.26%3A2710%2Fannounce&tr=http%3A%2F%2F182.176.139.129%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.zer0day.to%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fcoppersurfer.tk%3A6969%2Fannounce"><button
+                    type="button" class="btn btn-danger"><svg xmlns="http://www.w3.org/2000/svg" width="50" height="20"
+                      fill="currentColor" class="bi bi-download" viewBox="0 0 16 16">
+                      <path
+                        d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5z" />
+                      <path
+                        d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3z" />
+                    </svg></button></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- *************************************************************************************************** -->
+  <!-- FIM DO CARD  -->
+  <br><br>
+  <!-- incio h1 + icon -->
+  <h1> clique em <a href="listas.html" class="link-danger"><svg xmlns="http://www.w3.org/2000/svg" width="100"
+        height="100" fill="currentColor" class="bi bi-controller" viewBox="0 0 16 16">
+        <path
+          d="M11.5 6.027a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0zm-1.5 1.5a.5.5 0 1 0 0-1 .5.5 0 0 0 0 1zm2.5-.5a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0zm-1.5 1.5a.5.5 0 1 0 0-1 .5.5 0 0 0 0 1zm-6.5-3h1v1h1v1h-1v1h-1v-1h-1v-1h1v-1z" />
+        <path
+          d="M3.051 3.26a.5.5 0 0 1 .354-.613l1.932-.518a.5.5 0 0 1 .62.39c.655-.079 1.35-.117 2.043-.117.72 0 1.443.041 2.12.126a.5.5 0 0 1 .622-.399l1.932.518a.5.5 0 0 1 .306.729c.14.09.266.19.373.297.408.408.78 1.05 1.095 1.772.32.733.599 1.591.805 2.466.206.875.34 1.78.364 2.606.024.816-.059 1.602-.328 2.21a1.42 1.42 0 0 1-1.445.83c-.636-.067-1.115-.394-1.513-.773-.245-.232-.496-.526-.739-.808-.126-.148-.25-.292-.368-.423-.728-.804-1.597-1.527-3.224-1.527-1.627 0-2.496.723-3.224 1.527-.119.131-.242.275-.368.423-.243.282-.494.575-.739.808-.398.38-.877.706-1.513.773a1.42 1.42 0 0 1-1.445-.83c-.27-.608-.352-1.395-.329-2.21.024-.826.16-1.73.365-2.606.206-.875.486-1.733.805-2.466.315-.722.687-1.364 1.094-1.772a2.34 2.34 0 0 1 .433-.335.504.504 0 0 1-.028-.079zm2.036.412c-.877.185-1.469.443-1.733.708-.276.276-.587.783-.885 1.465a13.748 13.748 0 0 0-.748 2.295 12.351 12.351 0 0 0-.339 2.406c-.022.755.062 1.368.243 1.776a.42.42 0 0 0 .426.24c.327-.034.61-.199.929-.502.212-.202.4-.423.615-.674.133-.156.276-.323.44-.504C4.861 9.969 5.978 9.027 8 9.027s3.139.942 3.965 1.855c.164.181.307.348.44.504.214.251.403.472.615.674.318.303.601.468.929.503a.42.42 0 0 0 .426-.241c.18-.408.265-1.02.243-1.776a12.354 12.354 0 0 0-.339-2.406 13.753 13.753 0 0 0-.748-2.295c-.298-.682-.61-1.19-.885-1.465-.264-.265-.856-.523-1.733-.708-.85-.179-1.877-.27-2.913-.27-1.036 0-2.063.091-2.913.27z" />
+      </svg></a> para ver mais...</h1>
+  <!-- FIm h1 + icon -->
+
+  <br><br>
+  <div class="container col-6"><iframe width="560" height="315" src="https://www.youtube.com/embed/6AyzaUTfBZo"
+      title="YouTube video player" frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      allowfullscreen></iframe></div>
+
+
+  <br><br>
+  <div class="container col-6"> <iframe width="560" height="315" src="https://www.youtube.com/embed/6jY2f6OkpBo"
+      title="YouTube video player" frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      allowfullscreen></iframe></div>
+
+  <br><br>
+
+
+  <div class="container col-6"><video width="560" height="315" controls>
+      <source src="videos/hero.mp4" type="video/mp4">
+    </video>
+  </div>
+
+  <br><br>
+
+  <a href="https://wa.me/92986321151" target="_blank" class="icon float1 what" id="WhatsApp" onclick="Whapp()"> <svg
+      xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor"
+      class="bi bi-whatsapp  text-success " viewBox="0 0 16 16">
+      <path
+        d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z" />
+    </svg></a>
+
+
+  <!--inicio footer col-->
+  <footer>
+    <div class="container-footer">
+      <div class="row-footer">
+        <!-- footer col-->
+        <div class="footer-col">
+          <h4>Empresa</h4>
+          <ul>
+            <li><a href="#"> Quem somos </a></li>
+            <li><a href=""> nossos serviços </a></li>
+            <li><a href=""> política de privacidade </a></li>
+            <li><a href=""> programa de afiliados</a></li>
+          </ul>
+        </div>
+        <!--end footer col-->
+        <!-- footer col-->
+        <div class="footer-col">
+          <h4>Obter ajuda</h4>
+          <ul>
+            <li><a href="#">SAC</a></li>
+            <li><a href="#">Transporte</a></li>
+            <li><a href="#">devoluções</a></li>
+            <li><a href="#">Status De Pedido</a></li>
+            <li><a href="#">Opções De Pagamento</a></li>
+          </ul>
+        </div>
+        <!--end footer col-->
+        <!-- footer col-->
+        <div class="footer-col">
+          <h4>Loja online</h4>
+          <ul>
+            <li><a href="#">Relógio</a></li>
+            <li><a href="#">Saco</a></li>
+            <li><a href="#">Calçado</a></li>
+            <li><a href="#">Endereço</a></li>
+          </ul>
+        </div>
+        <!--end footer col-->
+        <!-- footer col-->
+        <div class="footer-col">
+          <h4>Se subescreva!</h4>
+          <div class="form-sub">
+            <form>
+              <input type="email" placeholder="Digite o seu e-mail" required>
+              <button>subscrever</button>
+            </form>
+          </div>
+
+          <div class="medias-socias">
+            <a href="#"> <i class="fa fa-facebook"></i> </a>
+            <a href="#"> <i class="fa fa-instagram"></i> </a>
+            <a href="#"> <i class="fa fa-twitter"></i> </a>
+            <a href="#"> <i class="fa fa-linkedin"></i> </a>
+          </div>
+
+        </div>
+        <!--end footer col-->
+      </div>
+    </div>
+        
+  </footer>
+
+  <script src="pesquisar.js"></script>
+  <script src="cadastro.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
